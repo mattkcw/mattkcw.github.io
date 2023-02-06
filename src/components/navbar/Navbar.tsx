@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { menuBool, pageSelected, scrollState, setMenuToggled, setScrollUp, setSelectedPage } from './navbarSlice'
 import mediaQuery from '../../mediaQuery'
+import menuIcon from '../../assets/menu-icon.svg'
+import closeIcon from '../../assets/close-icon.svg'
 
 
 
@@ -53,13 +55,13 @@ const Navbar = () => {
               {navLink('Gallery')}
             </div>
           ) : (<button className='rounded-full bg-red p-2' onClick={() => dispatch(setMenuToggled(!menuToggled))}>
-                <img src='src/assets/images/menu-icon.svg' alt='menu-icon' /></button>)}
+                <img src={menuIcon} alt='menu-icon' /></button>)}
 
         {!isAboveSmallScreen && menuToggled && (
           <div className='fixed right-0 bottom-0 h-full bg-blue w-[200px]'>
             <div className='flex justify-end p-12'>
               <button onClick={() => dispatch(setMenuToggled(!menuToggled))}>
-                <img src='src/assets/images/close-icon.svg' alt='close-icon' />
+                <img src={closeIcon} alt='close-icon' />
               </button>
             </div>
             <div className='flex flex-col gap-10 ml-[25%] text-2xl text-deep-blue'>

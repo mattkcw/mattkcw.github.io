@@ -3,6 +3,9 @@ import LineGradient from '../LineGradient'
 import mediaQuery from '../../mediaQuery'
 import { motion } from "framer-motion";
 import replacementwindow from '../../assets/replacement.png';
+import windows from '../../assets/windows.png';
+import construction from '../../assets/construction.png';
+import sliding from '../../assets/sliding.png';
 
 const SectionOne = () => {
   const isAboveMediumScreen = mediaQuery("(min-width: 1060px)");
@@ -40,11 +43,11 @@ const SectionOne = () => {
               <img
                 alt="skills"
                 className="z-10"
-                src="./assets/windows.png"
+                src={windows}
               />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src="./assets/windows.png" />
+            <img alt="skills" className="z-10" src={windows} />
           )}
         </div>
       </div>
@@ -72,7 +75,7 @@ const SectionOne = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
-          <img src="./assets/construction.png" alt="new construction windows" />
+          <img src={construction} alt="new construction windows" />
         </motion.div>
 
 
@@ -119,7 +122,7 @@ const SectionOne = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-[#d39146] absolute right-0 top-0 z-[-1]" />
           </div>
-          <img src="./assets/sliding.png" alt="sliding glass doors" />
+          <img src={sliding} alt="sliding glass doors" />
         </motion.div>
       </div>
     </section>

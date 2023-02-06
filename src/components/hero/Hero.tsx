@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import mediaQuery from "../../mediaQuery";
 import { useDispatch, useSelector } from 'react-redux';
 import { pageSelected, setSelectedPage } from '../navbar/navbarSlice';
+import palmtree from '../../assets/palmtree.png';
 
 const Hero = () => {
     const isAboveMediumScreen = mediaQuery("(min-width: 1060px)");
@@ -21,14 +22,14 @@ const Hero = () => {
             <img
               alt="profile"
               className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
-              src='./assets/palmtree.png'
+              src={palmtree}
             />
           </div>
         ) : (
           <img
             alt="profile"
             className="z-10 w-full max-w-[400px] md:max-w-[600px]"
-            src='./assets/palmtree.png'
+            src={palmtree}
           />
         )}
       </div>
