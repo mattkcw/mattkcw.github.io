@@ -2,6 +2,7 @@ import React from 'react'
 import LineGradient from '../LineGradient'
 import mediaQuery from '../../mediaQuery'
 import { motion } from "framer-motion";
+import replacementwindow from '../../assets/replacement.png';
 
 const SectionOne = () => {
   const isAboveMediumScreen = mediaQuery("(min-width: 1060px)");
@@ -95,7 +96,7 @@ const SectionOne = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
-          <img src="./assets/replacement.png" alt="replacement windows" />
+          <img src={replacementwindow} alt="replacement windows" />
         </motion.div>
         {/* IMAGINATIVE */}
         <motion.div
