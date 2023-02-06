@@ -16,7 +16,7 @@ const Navbar = () => {
   
   const navLink = (page: string) => {
     return (
-      <a className={`${selectedPage === page ? 'text-yellow' : ''} hover:text-yellow transition duration-300`}  
+      <a className='hover:text-yellow transition duration-300' 
         href={`#${page}`}
         onClick={() => dispatch(setSelectedPage(page))}>{page}
       </a>

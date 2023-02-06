@@ -39,11 +39,11 @@ const SectionOne = () => {
               <img
                 alt="skills"
                 className="z-10"
-                src="./assets/images/windows.png"
+                src="./assets/windows.png"
               />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src="./assets/images/windows.png" />
+            <img alt="skills" className="z-10" src="./assets/windows.png" />
           )}
         </div>
       </div>
@@ -71,7 +71,7 @@ const SectionOne = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
-          <img src="./assets/images/construction.png" alt="new construction windows" />
+          <img src="./assets/construction.png" alt="new construction windows" />
         </motion.div>
 
 
@@ -95,7 +95,7 @@ const SectionOne = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
-          <img src="./assets/images/replacement.png" alt="replacement windows" />
+          <img src="./assets/replacement.png" alt="replacement windows" />
         </motion.div>
         {/* IMAGINATIVE */}
         <motion.div
@@ -118,7 +118,7 @@ const SectionOne = () => {
             </div>
             <div className="w-1/2 md:w-3/4 h-32 bg-[#d39146] absolute right-0 top-0 z-[-1]" />
           </div>
-          <img src="./assets/images/sliding.png" alt="sliding glass doors" />
+          <img src="./assets/sliding.png" alt="sliding glass doors" />
         </motion.div>
       </div>
     </section>

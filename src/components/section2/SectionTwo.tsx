@@ -26,7 +26,7 @@ const Project = ({ title }: {title: string}) => {
       <div className={overlayStyles}>
         
       </div>
-      <img src={`./assets/images/${projectTitle}.jpg`} alt={projectTitle} />
+      <img src={`./assets/${projectTitle}.jpg`} alt={projectTitle} />
     </motion.div>
   );
 };
