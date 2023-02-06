@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root, .app {
+    height: 100%;
+    background-color: #010026;
+    @apply text-white;
+}
+
+html, body {
+	scroll-behavior: smooth;
+}
+
+
+@layer components {
+    .buttonNav-selected {
+      @apply relative bg-yellow before:absolute before:w-6 before:h-6 before:rounded-full before:border-2 before:border-yellow before:left-[-50%] before:top-[-50%];
+    }
+  }
