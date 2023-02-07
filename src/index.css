@@ -6,7 +6,7 @@
 
 html, body, #root, .app {
     height: 100%;
-    background-color: #010026;
+    background-color: #766bd1;
     @apply text-white;
 }
 

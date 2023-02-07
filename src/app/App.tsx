@@ -7,6 +7,7 @@ import Hero from '../components/hero/Hero';
 import LineGradient from '../components/LineGradient';
 import SectionOne from '../components/section1/SectionOne';
 import SectionTwo from '../components/section2/SectionTwo';
+import Contact from '../components/contact/Contact';
 
 function App() {
   const selectedPage = useSelector(pageSelected);
@@ -29,6 +30,9 @@ function App() {
       <LineGradient />
       <div className='w-5/6 mx-auto'>
         <SectionTwo />
+      </div>
+      <div className='w-5/6 mx-auto md:h-full'>
+        <Contact />
       </div>
     </div>
   )
