@@ -87,10 +87,9 @@ const Contact = () => {
 
             <textarea
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
-              name="message"
+
               placeholder="MESSAGE"
-              rows="4"
-              cols="50"
+
               {...register("message", {
                 required: true,
                 maxLength: 2000,
