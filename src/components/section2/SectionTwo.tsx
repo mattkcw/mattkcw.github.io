@@ -77,23 +77,11 @@ const SectionTwo = () => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
         >
-          {/* ROW 1 */}
-          
+         
           <Project title="Project 1" projectImage={project1} />
           <Project title="Project 2" projectImage={project2} />
-          
-
-          {/* ROW 2 */}
           <Project title="Project 3" projectImage={project3} />
-          <Project title="Project 4" projectImage={project4} />
-          <Project title="Project 5" projectImage={project5} />
 
-          {/* ROW 3 */}
-          <Project title="Project 6" projectImage={project6} />
-          <Project title="Project 7" projectImage={project7} />
-          <Project title="Project 8" projectImage={project8} />
-          <Project title="Project 9" projectImage={project9} />
-          
         </motion.div>
       </div>
     </section>
