@@ -6,7 +6,7 @@
 
 html, body, #root, .app {
     height: 100%;
-    background-color: #766bd1;
+    background-color: #20262E;
     @apply text-white;
 }
 
@@ -14,6 +14,20 @@ html, body {
 	scroll-behavior: smooth;
 }
 
+#tiles {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(var(--rows), 1fr);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: 1px;
+}
+
+#canvas-image-blending {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
 
 @layer components {
     .buttonNav-selected {

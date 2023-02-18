@@ -3,7 +3,7 @@ import mediaQuery from '../mediaQuery';
 import { useSelector, useDispatch } from 'react-redux'
 import { pageSelected, setSelectedPage } from '../components/navbar/navbarSlice';
 import ButtonNav from '../components/buttonnav/ButtonNav';
-import Hero from '../components/hero/Hero';
+import Hero2 from '../components/hero/Hero2';
 import LineGradient from '../components/LineGradient';
 import SectionOne from '../components/section1/SectionOne';
 import SectionTwo from '../components/section2/SectionTwo';
@@ -19,10 +19,7 @@ function App() {
     
     <div className="app bg-deep-blue">
       <Navbar />
-      <div className='w-5/6 mx-auto md:h-full'>
-        {/* {isAboveMediumScreen && <ButtonNav />} */}
-        <Hero />
-      </div>
+      <Hero2 />
       <LineGradient />
       <div className='w-5/6 mx-auto md:h-full'>
         <SectionOne />

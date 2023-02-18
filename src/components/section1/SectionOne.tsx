@@ -10,7 +10,7 @@ import sliding from '../../assets/sliding.png';
 const SectionOne = () => {
   const isAboveMediumScreen = mediaQuery("(min-width: 1060px)");
   return (
-    <section id="Products" className="pt-10 pb-24">
+    <section id="Projects" className="pt-10 pb-24">
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
           className="md:w-1/3"

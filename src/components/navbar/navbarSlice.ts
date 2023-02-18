@@ -21,7 +21,8 @@ export const navbarSlice = createSlice({
     initialState,
     reducers: {
         setSelectedPage: (state, action: PayloadAction<string>) => {
-            state.selectedPage = action.payload
+            state.selectedPage = action.payload;
+            state.scrollUp = true;
         },
         setMenuToggled: (state, action: PayloadAction<boolean>) => {
             state.menuToggled = action.payload

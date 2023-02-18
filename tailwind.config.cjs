@@ -24,6 +24,12 @@ module.exports = {
 
         "gradient-rainblue":
           "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+
+        "gradient-custom":
+          "linear-gradient(90deg, #4ECDC4 0%, #7184b4 100%)",
+        
+        "mountains":
+          "url('./assets/mountains.jpg')",
       }),
       fontFamily: {
         lora: ["Lora", "serif"],

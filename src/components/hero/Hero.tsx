@@ -11,7 +11,7 @@ const Hero = () => {
     const dispatch = useDispatch();
 
   return (
-    <section id='Home' className='md:flex md:justify-between md:items-center md:h-full gap-16 py-10'>
+    <section id='Home' className='md:flex md:justify-between md:items-center md:h-full gap-16 py-10 bg-[mountains]'>
       
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveMediumScreen ? (

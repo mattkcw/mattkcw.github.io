@@ -17,10 +17,11 @@ const Navbar = () => {
   
   
   const navLink = (page: string) => {
+    let section = document.getElementById(page);
+
     return (
-      <a className='hover:text-yellow transition duration-300' 
-        href={`#${page}`}
-        onClick={() => dispatch(setSelectedPage(page))}>{page}
+      <a className='hover:text-yellow transition duration-300 hover:cursor-pointer' 
+        onClick={() => window.scrollTo({ top: ( (page == 'Home') ? 0 : section.offsetTop + 50) , behavior: 'smooth'})}>{page}
       </a>
     )
   }
@@ -45,13 +46,13 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`z-40 w-full py-6 ${scrollUp ? 'fixed top-0' : ''}`}>
+    <nav className={`z-40 w-full py-2 ${scrollUp ? 'fixed top-0 bg-[#20262E]' : ''}`}>
       <div className='flex items-center justify-between mx-auto w-5/6'>
-        <h4 className='font-lora text-3xl font-bold'>Oasis</h4>
+        <h4 className='font-lora text-3xl font-bold'>mattkcw</h4>
           {isAboveSmallScreen ? (
             <div className='flex justify-between gap-16 font-lato text-sm font-semibold text-white'>
               {navLink('Home')}
-              {navLink('Products')}
+              {navLink('Projects')}
               {navLink('Gallery')}
             </div>
           ) : (<button className='rounded-full bg-red p-2' onClick={() => dispatch(setMenuToggled(!menuToggled))}>
