@@ -17,11 +17,11 @@ const Navbar = () => {
   
   
   const navLink = (page: string) => {
-    let section = document.getElementById(page);
+    const value = document.getElementById(page)?.offsetTop;
 
     return (
       <a className='hover:text-yellow transition duration-300 hover:cursor-pointer' 
-        onClick={() => window.scrollTo({ top: ( (page == 'Home') ? 0 : section.offsetTop + 50) , behavior: 'smooth'})}>{page}
+        onClick={() => window.scrollTo({ top: ( (page == 'Home') ? 0 : (value || 0) + 50) , behavior: 'smooth'})}>{page}
       </a>
     )
   }
