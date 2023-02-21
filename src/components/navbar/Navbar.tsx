@@ -21,7 +21,7 @@ const Navbar = () => {
 
     return (
       <a className='hover:text-yellow transition duration-300 hover:cursor-pointer' 
-        onClick={() => window.scrollTo({ top: ( (page == 'Home') ? 0 : (value || 0) + 50) , behavior: 'smooth'})}>{page}
+        onClick={() => window.scrollTo({ top: ( (page == 'Home') ? 0 : (value || 0) -80) , behavior: 'smooth'})}>{page}
       </a>
     )
   }
@@ -53,7 +53,6 @@ const Navbar = () => {
             <div className='flex justify-between gap-16 font-lato text-sm font-semibold text-white'>
               {navLink('Home')}
               {navLink('Projects')}
-              {navLink('Gallery')}
             </div>
           ) : (<button className='rounded-full bg-red p-2' onClick={() => dispatch(setMenuToggled(!menuToggled))}>
                 <img src={menuIcon} alt='menu-icon' /></button>)}
@@ -67,8 +66,7 @@ const Navbar = () => {
             </div>
             <div className='flex flex-col gap-10 ml-[25%] text-2xl text-deep-blue'>
               {navLink('Home')}
-              {navLink('Products')}
-              {navLink('Gallery')}
+              {navLink('Projects')}
             </div>
           </div>
         )}          

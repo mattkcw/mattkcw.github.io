@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { delay, motion } from "framer-motion";
-import { useDispatch, useSelector } from 'react-redux';
-import { pageSelected, setSelectedPage } from '../navbar/navbarSlice';
+import { motion } from "framer-motion";
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import Granim from 'granim';
 import mountains from '../../assets/mountains-resized.png';
+import TextBounce from '../TextBounce';
 
 const Hero2 = () => {
-  const dispatch = useDispatch();
   const [windowSize, setWindowSize] = useState([window.innerHeight, window.innerWidth]);
   const githubUrl: string = 'https://github.com/mattkcw?tab=repositories'
   const linkedinUrl: string = 'https://www.linkedin.com/in/kangcm'
@@ -35,12 +33,12 @@ const Hero2 = () => {
       states : {
           "default-state": {
               gradients: [
-                  ['#29323c', '#485563'],
+                  ['#3e464f', '#485563'],
                   ['#FF6B6B', '#556270'],
                   ['#80d3fe', '#7ea0c4'],
-                  ['#f0ab51', '#eceba3']
+                  // ['#f0ab51', '#eceba3']
               ],
-              transitionSpeed: 5000
+              transitionSpeed: 4000
           }
       }
   });
@@ -55,20 +53,20 @@ const Hero2 = () => {
   const handleButtonClick = () => {
     let projectsSection = document.getElementById("Projects");
     if (projectsSection != null) {
-      window.scrollTo({ top: (projectsSection.offsetTop + 50) , behavior: 'smooth'});
+      window.scrollTo({ top: (projectsSection.offsetTop + 10) , behavior: 'smooth'});
     }
   }
 
   return (
     <>
     <section id='Home' className=''>
-      <canvas id='canvas-image-blending' className='z-0 bg-center'></canvas>
+      <canvas id='canvas-image-blending' className='z-10 bg-center'></canvas>
       <div id='tiles'>
-        {createTiles(windowSize)}
+        {/* {createTiles(windowSize)} */}
       </div>
       
       <div className='absolute inset-0 flex  flex-col justify-center items-center z-10'>
-        <motion.p className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6 text-white'
+        {/* <motion.p className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6 text-white'
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, amount: 0.7 }}
@@ -79,7 +77,9 @@ const Hero2 = () => {
           }}
         >
           Matthew Kang
-        </motion.p>
+        </motion.p> */}
+        <TextBounce />
+        
         <motion.p 
           className='md:text-2xl sm:text-md text-2xl font-serif'
           initial='hidden'
@@ -94,7 +94,7 @@ const Hero2 = () => {
           Full Stack Developer
         </motion.p>
         <div className='flex pt-8 pb-40'>
-          <motion.div
+          <motion.a
             initial='hidden'
             whileInView='visible'
             viewport={{ once: false, amount: 0.7 }}
@@ -103,13 +103,13 @@ const Hero2 = () => {
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
             }}
+            href={githubUrl}
+            target='_blank'
           >
-            <AiFillGithub size={50} className='mr-1 hover:cursor-pointer transform hover:fill-[#60b47c] hover:scale-125 transition duration-300 ease-in-out'
-              onClick={() => { window.location.href = githubUrl; }} 
-            />
-          </motion.div>
+            <AiFillGithub size={50} className='mr-1 hover:cursor-pointer transform hover:fill-[#60b47c] hover:scale-125 transition duration-300 ease-in-out' />
+          </motion.a>
 
-          <motion.div
+          <motion.a
             initial='hidden'
             whileInView='visible'
             viewport={{ once: false, amount: 0.5 }}
@@ -118,20 +118,20 @@ const Hero2 = () => {
               hidden: { opacity: 0, y: 60 },
               visible: { opacity: 1, y: 0 },
             }}
+            href={linkedinUrl}
+            target='_blank'
           >
-            <AiFillLinkedin size={50} className='ml-1 hover:cursor-pointer transform hover:fill-[#00A0DC] hover:scale-125 transition duration-300 ease-in-out' 
-              onClick={() => { window.location.href = linkedinUrl; }} 
-            />
-          </motion.div>
+            <AiFillLinkedin size={50} className='ml-1 hover:cursor-pointer transform hover:fill-[#00A0DC] hover:scale-125 transition duration-300 ease-in-out' />
+          </motion.a>
 
         </div>
         <motion.div
           initial='hidden'
           whileInView='visible'
           viewport={{ once: false, amount: 0.7 }}
-          transition={{ delay: 0.4, duration: 0.4 }}
+          transition={{ delay: 0.3, duration: 0.4 }}
           variants={{
-            hidden: { opacity: 0, y: 30 },
+            hidden: { opacity: 0, y: -50 },
             visible: { opacity: 1, y: 0 },
           }}
         >

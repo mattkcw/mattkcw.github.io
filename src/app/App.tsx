@@ -2,12 +2,11 @@ import Navbar from '../components/navbar/Navbar';
 import mediaQuery from '../mediaQuery';
 import { useSelector, useDispatch } from 'react-redux'
 import { pageSelected, setSelectedPage } from '../components/navbar/navbarSlice';
-import ButtonNav from '../components/buttonnav/ButtonNav';
 import Hero2 from '../components/hero/Hero2';
 import LineGradient from '../components/LineGradient';
-import SectionOne from '../components/section1/SectionOne';
-import SectionTwo from '../components/section2/SectionTwo';
-import Contact from '../components/contact/Contact';
+import Cursor from '../components/cursor/Cursor';
+import Projects from '../components/section1/Projects';
+import Footer from '../components/Footer';
 
 function App() {
   const selectedPage = useSelector(pageSelected);
@@ -18,19 +17,14 @@ function App() {
 
     
     <div className="app bg-deep-blue">
+      <Cursor />
       <Navbar />
       <Hero2 />
       <LineGradient />
-      <div className='w-5/6 mx-auto md:h-full'>
-        <SectionOne />
+      <div className='w-11/12 mx-auto md:h-full'>
+        <Projects />
       </div>
-      <LineGradient />
-      <div className='w-5/6 mx-auto'>
-        <SectionTwo />
-      </div>
-      <div className='w-5/6 mx-auto md:h-full'>
-        <Contact />
-      </div>
+      <Footer />
     </div>
   )
 }
